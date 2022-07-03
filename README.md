@@ -2,7 +2,7 @@
 # Sistema Solar com OpenGL
 
 ## 💻 Sobre o projeto
- O projeto consiste em desenhover/esenhar uma cena em 3D com a formação e movimentação do sistema solar interativo utilizando C++ e OpengGL.
+ O projeto consiste em desenhover/desenhar uma cena em 3D com a formação e movimentação do sistema solar interativo utilizando C++ e OpengGL.
 
 ## ⚙️ Funcionamento: 
 
