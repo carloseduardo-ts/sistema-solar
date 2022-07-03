@@ -3,18 +3,13 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-
 #include <GL/glew.h>
-
 #include <GLFW/glfw3.h>
-
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
 #include <glm/gtx/string_cast.hpp>
-
 #define STB_IMAGE_IMPLEMENTATION
 #include "deps/stb/stb_image.h"
-
 #include "Camera.h"
 
 int Width = 800;
