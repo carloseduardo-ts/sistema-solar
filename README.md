@@ -21,6 +21,7 @@ As ferramentas usadas para a construção do projeto foram as seguintes:
 ## ⚙️ Funcionamento: 
 
 #### Para Compilar:
+-  Abrir um terminal onde na pasta dos arquivos e executar:
 
 ```
 gcc -c Camera.cpp -o camera.o
