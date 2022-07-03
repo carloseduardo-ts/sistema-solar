@@ -41,4 +41,6 @@ g++ camera.o main.cpp -o teste -lGL -lGLU -lglfw -lrt -lm -ldl -lXrandr -lXext -
 - Carlos Eduardo Tabosa Silva - 385101
 - Antonio Ray Martins Vieira - 404583
 
-## 🎥 Vídeo demonstrando funcionamento: https://www.youtube.com/watch?v=BtSEcBt59vg
+## 🎥 Vídeo demonstrando funcionamento: 
+
+https://www.youtube.com/watch?v=BtSEcBt59vg
