@@ -1,5 +1,5 @@
 
-# sistema-solar-openGL
+# Sistema Solar com OpenGL
 
 ## 💻 Sobre o projeto
  Desenhar uma cena em 3D com a formação e movimentação do sistema solar.
@@ -13,15 +13,14 @@
 As ferramentas usadas para a construção do projeto foram as seguintes:
 
 - [Visual Studio Code](https://visualstudio.microsoft.com/pt-br/downloads/)
-- [MingGW](????)
-- [OPENGL](????)
-- [GL](????)
-- [GLW](????)
-- [GLAD](????)
+- [MingGW](https://sourceforge.net/projects/mingw/)
+- [OPENGL](https://www.opengl.org/)
+- [GLFW](https://www.glfw.org/)
+- [GLM](https://glm.g-truc.net/0.9.9/)
 
-## ⚙️ Funcionalidades - COMPILAR: 
+## ⚙️ Funcionamento: 
 
-## Compilar
+#### Para Compilar:
 
 ```
 gcc -c Camera.cpp -o camera.o
@@ -41,9 +40,4 @@ g++ camera.o main.cpp -o teste -lGL -lGLU -lglfw -lrt -lm -ldl -lXrandr -lXext -
 - Carlos Eduardo Tabosa Silva - 385101
 - Antonio Ray Martins Vieira - 404583
 
-## 📝 Referências
-
-- [?](?)
-- [?](?)
-- [?](?)
-- [?](?)
+## 🎥 Vídeo demonstrando funcionamento: https://www.youtube.com/watch?v=BtSEcBt59vg
