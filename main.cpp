@@ -462,7 +462,7 @@ int main()
 
 		glUseProgram(ProgramId);
 
-		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~EARTH~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TERRA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 		glm::mat4 ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixEarth = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -510,7 +510,7 @@ int main()
 
 		glBindTexture(GL_TEXTURE_2D, 0);
 
-		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MERCURY~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MERCURIO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixMercury = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -600,7 +600,7 @@ int main()
 
 		glBindTexture(GL_TEXTURE_2D, 0);
 
-		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MARS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MARTE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixMars = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -643,7 +643,7 @@ int main()
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 
-		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~JUPTER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~JUPITER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixJupter = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -685,7 +685,7 @@ int main()
 
 		glBindTexture(GL_TEXTURE_2D, 0);
 
-		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SATURN~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SATURNO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixSaturn = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -727,7 +727,7 @@ int main()
 
 		glBindTexture(GL_TEXTURE_2D, 0);
 
-		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~URANUS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~URANO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixUranus = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -769,7 +769,7 @@ int main()
 
 		glBindTexture(GL_TEXTURE_2D, 0);
 
-		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~NEPTUNE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~NETUNO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixNeptune = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -811,7 +811,7 @@ int main()
 
 		glBindTexture(GL_TEXTURE_2D, 0);
 
-		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SUN~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SOL~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixSun = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -852,7 +852,7 @@ int main()
 
 		glBindTexture(GL_TEXTURE_2D, 0);
 
-		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MOON~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LUA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixMoon = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
