@@ -4,10 +4,6 @@
 ## 💻 Sobre o projeto
  Desenhar uma cena em 3D com a formação e movimentação do sistema solar.
 
-## 💡 Planejamento
-
-## 🖥️ Descrição do Protótipo
-
 ## 🛠 Tecnologias Utilizadas
 
 As ferramentas usadas para a construção do projeto foram as seguintes:
