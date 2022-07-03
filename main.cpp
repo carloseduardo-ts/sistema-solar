@@ -366,7 +366,7 @@ int main()
 	// Habilita o Buffer de Profundidade
 	glEnable(GL_DEPTH_TEST);
 
-	// Escolhe a fun��o de teste de profundidade.
+	// Escolhe a função de teste de profundidade.
 	glDepthFunc(GL_ALWAYS);
 
 	glDisable(GL_CULL_FACE);
@@ -375,7 +375,7 @@ int main()
 	// Compilar o vertex e o fragment shader
 	GLuint ProgramId = LoadShaders("shaders/triangle_vert.glsl", "shaders/triangle_frag.glsl");
 
-	// Gera a Geometria da esfera e copia os dados para a GPU (mem�ria da placa de v�deo)
+	// Gera a Geometria da esfera e copia os dados para a GPU 
 	std::vector<Vertex> SphereVertices;
 	std::vector<Triangle> SphereIndices;
 	GenerateSphere(100, SphereVertices, SphereIndices);
@@ -392,20 +392,19 @@ int main()
 	Light.Direction = glm::vec3(0.0f, 0.0f, -1.0f);
 	Light.Intensity = 1.0f;
 
-	// Carregar a Textura para a Mem�ria de V�deo
-	GLuint EarthTextureId = LoadTexture("textures/earth_2k.jpg");
-	GLuint MercuryTextureId = LoadTexture("textures/mercury_2k.jpg");
-	GLuint VenusTextureId = LoadTexture("textures/venus_2k.jpg");
-	GLuint MarsTextureId = LoadTexture("textures/mars_2k.jpg");
-	GLuint JupterTextureId = LoadTexture("textures/jupter_2k.jpg");
-	GLuint SaturnTextureId = LoadTexture("textures/saturn_2k.jpg");
-	GLuint UranusTextureId = LoadTexture("textures/uranus_2k.jpg");
-	GLuint NeptuneTextureId = LoadTexture("textures/neptune_2k.jpg");
-	GLuint SunTextureId = LoadTexture("textures/sun_2k.jpg");
-	GLuint MoonTextureId = LoadTexture("textures/moon_2k.jpg");
-
-	GLuint EarthCloudsTextureId = LoadTexture("textures/earth_clouds_2k.jpg");
-	GLuint VenusCloudsTextureId = LoadTexture("textures/venus_clouds_2k.jpg");
+	// Carregar a Textura para a Memoria de Vídeo
+	GLuint EarthTextureId = LoadTexture("textures/terra.jpg");
+	GLuint MercuryTextureId = LoadTexture("textures/mercurio.jpg");
+	GLuint VenusTextureId = LoadTexture("textures/venus.jpg");
+	GLuint MarsTextureId = LoadTexture("textures/marte.jpg");
+	GLuint JupterTextureId = LoadTexture("textures/jupiter.jpg");
+	GLuint SaturnTextureId = LoadTexture("textures/saturno.jpg");
+	GLuint UranusTextureId = LoadTexture("textures/urano.jpg");
+	GLuint NeptuneTextureId = LoadTexture("textures/netuno.jpg");
+	GLuint SunTextureId = LoadTexture("textures/sol.jpg");
+	GLuint MoonTextureId = LoadTexture("textures/lua.jpg");
+	GLuint EarthCloudsTextureId = LoadTexture("textures/terra_nuvens.jpg");
+	GLuint VenusCloudsTextureId = LoadTexture("textures/venus_nuvens.jpg");
 
 	// Configura a cor de fundo
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0);
@@ -419,10 +418,9 @@ int main()
 	// Habilitar o VAO
 	glBindVertexArray(SphereVAO);
 
-	// Habilita o atributo na posi��o 0, normalmente � o atributo de v�rtices
-	// Esse vai ser o identificador que vamos usar no shader para ler a posi��o
-	// de cada v�rtice, mas n�o se preocupe com isso agora. Vai ficar tudo mais
-	// claro quando formos falar de shaders
+	// Habilita o atributo na posição 0
+	// Esse vai ser o identificador que vamos usar no shader para ler a posiçãoo
+	// de cada vértice.
 	glEnableVertexAttribArray(0);
 	glEnableVertexAttribArray(1);
 	glEnableVertexAttribArray(2);
@@ -433,8 +431,8 @@ int main()
 	glBindBuffer(GL_ARRAY_BUFFER, SphereVertexBuffer);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, SphereElementBuffer);
 
-	// Informa ao OpenGL onde, dentro do VertexBuffer, os v�rtices est�o. No
-	// nosso caso o array Triangles � tudo o que a gente precisa
+	// Informa ao OpenGL onde, dentro do VertexBuffer, os vértices estão. No
+	// nosso caso o array Triangles é tudo o que a gente precisa
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), nullptr);
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_TRUE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, Normal)));
 	glVertexAttribPointer(2, 3, GL_FLOAT, GL_TRUE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, Color)));
