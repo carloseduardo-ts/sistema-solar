@@ -20,6 +20,9 @@ g++ camera.o main.cpp -o teste -lGL -lGLU -lglfw -lrt -lm -ldl -lXrandr -lXext -
 
 https://www.youtube.com/watch?v=BtSEcBt59vg
 
+## Dificuldades encontradas 
+
+
 ## 🛠 Tecnologias Utilizadas
 
 As ferramentas usadas para a construção do projeto foram as seguintes:

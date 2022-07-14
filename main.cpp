@@ -390,7 +390,6 @@ int main()
 	// Criar uma fonte de luz direcional
 	DirectionalLight Light;
 	Light.Direction = glm::vec3(0.0f, 0.0f, -1.0f);
-	Light.Intensity = 1.0f;
 
 	// Carregar a Textura para a Memoria de Vídeo
 	GLuint EarthTextureId = LoadTexture("textures/terra.jpg");
@@ -483,7 +482,6 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		GLint LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
-		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		glm::vec4 LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -531,7 +529,6 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
-		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -573,7 +570,6 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
-		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -621,7 +617,6 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
-		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -664,7 +659,6 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
-		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -706,7 +700,6 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
-		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -748,7 +741,6 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
-		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -790,7 +782,6 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
-		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -831,7 +822,6 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
-		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -872,7 +862,6 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
-		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
