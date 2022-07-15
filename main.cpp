@@ -202,7 +202,7 @@ GLuint LoadTexture(const char* TextureFile)
 	// Habilita a textura para ser modificada
 	glBindTexture(GL_TEXTURE_2D, TextureId);
 
-	// Copia a textura para a mem�ria da GPU
+	// Copia a textura para a memória da GPU
 	GLint Level = 0;
 	GLint Border = 0;
 	glTexImage2D(GL_TEXTURE_2D, Level, GL_RGB, TextureWidth, TextureHeight, Border, GL_RGB, GL_UNSIGNED_BYTE, TextureData);
@@ -389,7 +389,15 @@ int main()
 
 	// Criar uma fonte de luz direcional
 	DirectionalLight Light;
-	Light.Direction = glm::vec3(0.0f, 0.0f, -1.0f);
+	Light.Direction = glm::vec3(0.0f, 0.0f, -1.5f);
+	
+	//configurando iluminação
+	static const GLfloat light_position[] =    {    0.0f,    0.0f,    0.0f,    0.01f   };
+	static const GLfloat light_no_specular[] = {    0.0f,    0.0f,    0.0f,    1.0f    };
+	static const GLfloat light_diffuse[]  =    {    1.0f,    1.0f,    1.0f,    1.0f    };
+	static const GLfloat light_no_ambient[]  = {    0.0f,    0.0f,    0.0f,    1.0f    };
+	static const GLfloat light_ambient[]  =    {    1.0f,    1.0f,    1.0f,    1.0f    };
+	
 
 	// Carregar a Textura para a Memoria de Vídeo
 	GLuint EarthTextureId = LoadTexture("textures/terra.jpg");
