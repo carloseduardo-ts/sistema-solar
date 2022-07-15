@@ -398,6 +398,11 @@ int main()
 	static const GLfloat light_no_ambient[]  = {    0.0f,    0.0f,    0.0f,    1.0f    };
 	static const GLfloat light_ambient[]  =    {    1.0f,    1.0f,    1.0f,    1.0f    };
 	
+	//chamada bibliotecas
+	glLightfv(GL_LIGHT0,    GL_POSITION,    light_position);
+    	glLightfv(GL_LIGHT0,    GL_SPECULAR,    light_no_specular);
+    	glLightfv(GL_LIGHT0,    GL_AMBIENT,    light_no_ambient);
+	
 
 	// Carregar a Textura para a Memoria de Vídeo
 	GLuint EarthTextureId = LoadTexture("textures/terra.jpg");
