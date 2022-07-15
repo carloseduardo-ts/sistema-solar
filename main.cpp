@@ -392,16 +392,7 @@ int main()
 	Light.Direction = glm::vec3(0.0f, 0.0f, -1.5f);
 	
 	//configurando iluminação
-	static const GLfloat light_position[] =    {    0.0f,    0.0f,    0.0f,    0.01f   };
-	static const GLfloat light_no_specular[] = {    0.0f,    0.0f,    0.0f,    1.0f    };
-	static const GLfloat light_diffuse[]  =    {    1.0f,    1.0f,    1.0f,    1.0f    };
-	static const GLfloat light_no_ambient[]  = {    0.0f,    0.0f,    0.0f,    1.0f    };
-	static const GLfloat light_ambient[]  =    {    1.0f,    1.0f,    1.0f,    1.0f    };
-	
-	//chamada bibliotecas
-	glLightfv(GL_LIGHT0,    GL_POSITION,    light_position);
-    	glLightfv(GL_LIGHT0,    GL_SPECULAR,    light_no_specular);
-    	glLightfv(GL_LIGHT0,    GL_AMBIENT,    light_no_ambient);
+	GLfloat light_position[] = {1.0, 1.0, 1.0, 0.0};
 	
 
 	// Carregar a Textura para a Memoria de Vídeo
@@ -431,8 +422,7 @@ int main()
 	glBindVertexArray(SphereVAO);
 
 	// Habilita o atributo na posição 0
-	// Esse vai ser o identificador que vamos usar no shader para ler a posiçãoo
-	// de cada vértice.
+	// Esse vai ser o identificador que vamos usar no shader para ler a posiçãoo de cada vértice.
 	glEnableVertexAttribArray(0);
 	glEnableVertexAttribArray(1);
 	glEnableVertexAttribArray(2);
@@ -443,8 +433,8 @@ int main()
 	glBindBuffer(GL_ARRAY_BUFFER, SphereVertexBuffer);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, SphereElementBuffer);
 
-	// Informa ao OpenGL onde, dentro do VertexBuffer, os vértices estão. No
-	// nosso caso o array Triangles é tudo o que a gente precisa
+	// Informa ao OpenGL onde, dentro do VertexBuffer, os vértices estão.
+	// No caso o array Triangles é tudo o que a gente precisa
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), nullptr);
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_TRUE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, Normal)));
 	glVertexAttribPointer(2, 3, GL_FLOAT, GL_TRUE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, Color)));
@@ -521,6 +511,8 @@ int main()
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MERCURIO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
+		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixMercury = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
 		ModelMatrixMercury = glm::translate(ModelMatrixMercury, glm::vec3(sin((float)CurrentTime * 0.5) * 20.0, 0.0f, cos((float)CurrentTime * 0.5) * 20.0));
@@ -561,7 +553,9 @@ int main()
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~VENUS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
+		
+		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixVenus = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
 		ModelMatrixVenus = glm::translate(ModelMatrixVenus, glm::vec3(sin((float)CurrentTime * 0.1) * 40.0, 0.0f, cos((float)CurrentTime * 0.1) * 40.0));
@@ -608,6 +602,8 @@ int main()
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MARTE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+		
+		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
 
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixMars = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -650,7 +646,9 @@ int main()
 
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~JUPITER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
+		
+		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixJupter = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
 		ModelMatrixJupter = glm::translate(ModelMatrixJupter, glm::vec3(sin((float)CurrentTime * 2.4) * 100.0, 0.0f, cos((float)CurrentTime * 2.4) * 100.0));
@@ -691,7 +689,9 @@ int main()
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SATURNO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
+		
+		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixSaturn = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
 		ModelMatrixSaturn = glm::translate(ModelMatrixSaturn, glm::vec3(sin((float)CurrentTime * 2) * 120.0, 0.0f, cos((float)CurrentTime * 2) * 120.0));
@@ -732,7 +732,9 @@ int main()
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~URANO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
+		
+		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixUranus = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
 		ModelMatrixUranus = glm::translate(ModelMatrixUranus, glm::vec3(sin((float)CurrentTime * 1.5) * 140.0, 0.0f, cos((float)CurrentTime * 1.5) * 140.0));
@@ -773,7 +775,9 @@ int main()
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~NETUNO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
+		
+		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixNeptune = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
 		ModelMatrixNeptune = glm::translate(ModelMatrixNeptune, glm::vec3(sin((float)CurrentTime * 1.7) * 160.0, 0.0f, cos((float)CurrentTime * 1.7) * 160.0));
@@ -814,7 +818,9 @@ int main()
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SOL~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
+		
+		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixSun = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
 		ModelMatrixSun = glm::scale(ModelMatrixSun, glm::vec3(8.0f, 8.0f, 8.0f));
@@ -854,7 +860,9 @@ int main()
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LUA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
+		
+		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixMoon = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
 		ModelMatrixMoon = glm::translate(ModelMatrixMoon, glm::vec3(sin((float)CurrentTime) * 60.0, 5.0f, cos((float)CurrentTime) * 50.0));
