@@ -391,8 +391,7 @@ int main()
 	DirectionalLight Light;
 	Light.Direction = glm::vec3(0.0f, 0.0f, -1.5f);
 	
-	//configurando iluminação
-	GLfloat light_position[] = {1.0, 1.0, 1.0, 0.0};
+	
 	
 
 	// Carregar a Textura para a Memoria de Vídeo
@@ -511,7 +510,6 @@ int main()
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MERCURIO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
 		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixMercury = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -554,7 +552,7 @@ int main()
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~VENUS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 		
-		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixVenus = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -603,7 +601,7 @@ int main()
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MARTE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 		
-		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixMars = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -647,7 +645,7 @@ int main()
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~JUPITER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 		
-		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixJupter = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -690,7 +688,7 @@ int main()
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SATURNO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 		
-		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixSaturn = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -733,7 +731,7 @@ int main()
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~URANO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 		
-		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixUranus = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -776,7 +774,7 @@ int main()
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~NETUNO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 		
-		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixNeptune = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -819,7 +817,7 @@ int main()
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SOL~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 		
-		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixSun = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -861,7 +859,7 @@ int main()
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LUA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 		
-		glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+		
 		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixMoon = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
