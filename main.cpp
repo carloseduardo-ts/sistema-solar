@@ -907,6 +907,40 @@ int main()
 		glfwSwapBuffers(Window);
 	}
 
+	//Teste de Luz
+	light_setup(); //light environment
+
+
+	void light_setup(void)
+	{ 
+		GLfloat ambient[] = { 0.0, 0.0, 0.0, 1.0 };
+		GLfloat diffuse[] = { 1.0, 1.0, 1.0, 1.0 };
+		GLfloat position[] = { 0.0, 5.0, -5.0, 25.0 };
+		glEnable(GL_LIGHTING);
+
+		glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
+		glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
+		glLightfv(GL_LIGHT0, GL_POSITION, position);
+		glEnable(GL_LIGHT0);
+
+		glEnable(GL_LIGHTING);
+		glEnable(GL_LIGHT0);
+		glEnable(GL_DEPTH_TEST);
+	}
+
+	void initLighting()
+	{
+   		//glMaterialfv(GL_FRONT,GL_AMBIENT,yellow);
+    		//glMaterialfv(GL_FRONT,GL_SPECULAR,yellow);
+   		glEnable(GL_LIGHTING);
+    		glEnable(GL_LIGHT7);
+
+    		glLightfv(GL_LIGHT7, GL_AMBIENT, qAmb);
+    		glLightfv(GL_LIGHT7, GL_DIFFUSE, qDif);
+    		glLightfv(GL_LIGHT7, GL_SPECULAR, qSpec);
+    		//glMaterialfv(GL_FRONT,GL_DIFFUSE,yellow);
+	}
+
 	glDeleteBuffers(1, &SphereElementBuffer);
 	glDeleteBuffers(1, &SphereVertexBuffer);
 	glDeleteVertexArrays(1, &SphereVAO);
