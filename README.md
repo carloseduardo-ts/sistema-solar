@@ -22,6 +22,9 @@ https://www.youtube.com/watch?v=BtSEcBt59vg
 
 ## Dificuldades encontradas 
 
+De inicio a equipe teve dificuldades para configurar o ambiente com as dependências e conseguir dar os primeiros passos no trabalho. Somente três integrantes conseguiram configurar o ambiente, dois utilizando o Visual Studio e um pelo VS Code, e ao avançar no trabalho apresentou-se um erro no Visual Studio referente a inicialização dos projetos e como não foi encontrado solução para não perder foi decidido escolher o VS Code para construir o trabalho.
+
+
 
 ## 🛠 Tecnologias Utilizadas
 
