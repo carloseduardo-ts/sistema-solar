@@ -18,7 +18,7 @@ g++ camera.o main.cpp -o teste -lGL -lGLU -lglfw -lrt -lm -ldl -lXrandr -lXext -
 ```
 ## 🎥 Vídeo demonstrando funcionamento: 
 
-https://www.youtube.com/watch?v=BtSEcBt59vg
+https://www.youtube.com/watch?v=aimzyKZRjEs
 
 ## 🛠 Tecnologias Utilizadas
 
@@ -32,9 +32,12 @@ As ferramentas usadas para a construção do projeto foram as seguintes:
 
 ## 🚧 Dificuldades encontradas 
 
-De inicio a equipe teve dificuldades para configurar o ambiente com as dependências e conseguir dar os primeiros passos no trabalho. Somente três integrantes conseguiram configurar o ambiente, dois utilizando o Visual Studio e um pelo VS Code, e ao avançar no trabalho apresentou-se um erro no Visual Studio referente a inicialização dos projetos e como não foi encontrado solução para não perder foi decidido escolher o VS Code para construir o trabalho. Pensando nos integrantes que não conseguiram confirgurar o ambiente decidimos marcar sempre uma reunião a cada avanço que era obtido no trabalho para explicar como estava sendo feito o projeto e também para possíveis ajustes ou aplicação de novas funções.
-Na primeira parte do projeto a maior dificuldade foi importar corretamente as bibliotecas e chamar corretamente elas ao decorrer do programa, outra dificuldade foi a compilação do código com erros na crição da cena, resultando em tela escura, e na rotação dos planetas.
-Na segunda parte do trabalho mais dois membros conseguiram configurar corretamente o ambiente e executar o projeto, sendo assim tivemos mais tentativas na aplicação da iluminação, as dificuldades aqui encontradas foi com relação a aplicação da luz posicional, especular e no ambiente que não eram visto diferenças. A equipe tentou predefinir valores e chamar as funções iluminando cada planeta mas ainda assim não foi possivel ver modificação. Por fim, foi encontrado a solução predefinindo valores para luz direcional e intensidade e passando como parâmetro na função de localização de cada planeta. 
+De inicio a equipe teve dificuldades para configurar o ambiente com as dependências e conseguir dar os primeiros passos no trabalho. 
+Somente três integrantes conseguiram configurar o ambiente, dois utilizando o Visual Studio e um pelo VS Code, mas ao avançar no trabalho apresentou-se um erro no Visual Studio referente a execução dos projetos e, como não foi encontrado solução, para não perder foi decidido escolher o VS Code para construir o trabalho. 
+Pensando nos integrantes que não conseguiram confirgurar o ambiente decidimos marcar sempre uma reunião a cada avanço que era obtido no trabalho para explicar como estava sendo feito o projeto e também para possíveis ajustes ou aplicação de novas funções.
+Na primeira parte do projeto a maior dificuldade foi importar corretamente as bibliotecas e chamar elas ao decorrer do programa, outra dificuldade foi a compilação do código com erros na crição da cena, resultando em tela escura, e na rotação dos planetas.
+Na segunda parte do trabalho mais dois membros conseguiram configurar corretamente o ambiente e executar o projeto, sendo assim tivemos mais tentativas na aplicação da iluminação. 
+As dificuldades aqui encontradas foram com relação a aplicação da luz posicional, especular e no ambiente que não eram visto diferenças. A equipe tentou predefinir valores e chamar as funções iluminando cada planeta mas ainda assim não foi possivel ver modificação. Por fim, foi encontrado a solução predefinindo valores para luz direcional e intensidade e passando como parâmetro na função de localização de cada planeta. 
 
 ## 💪 Equipe
 
@@ -48,7 +51,7 @@ Na segunda parte do trabalho mais dois membros conseguiram configurar corretamen
 
 ## 📝Referencias
 
-[Mostrar objetos em uma janela](https://cs.lmu.edu/~ray/notes/openglexamples/)
-[Rotação dos planetas](https://www.inf.ufrgs.br/~amaciel/teaching/SIS0381-10-1/exercise8.html)
-[Aplicação de texturas](https://www.codeincodeblock.com/2012/05/simple-method-for-texture-mapping-on.html)
+- [Mostrar objetos em uma janela](https://cs.lmu.edu/~ray/notes/openglexamples/)
+- [Rotação dos planetas](https://www.inf.ufrgs.br/~amaciel/teaching/SIS0381-10-1/exercise8.html)
+- [Aplicação de texturas](https://www.codeincodeblock.com/2012/05/simple-method-for-texture-mapping-on.html)
 
