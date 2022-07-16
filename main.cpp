@@ -390,8 +390,7 @@ int main()
 	// Criar uma fonte de luz direcional
 	DirectionalLight Light;
 	Light.Direction = glm::vec3(0.0f, 0.0f, -1.5f);
-	
-	
+	Light.Intensity = 1.5f;
 	
 
 	// Carregar a Textura para a Memoria de Vídeo
@@ -484,6 +483,7 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		GLint LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
+		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		glm::vec4 LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -532,6 +532,7 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
+		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -551,7 +552,6 @@ int main()
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~VENUS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-		
 		
 		
 		ViewMatrix = Camera.GetView();
@@ -575,6 +575,7 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
+		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -601,7 +602,6 @@ int main()
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MARTE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 		
-		
 
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixMars = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
@@ -624,6 +624,7 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
+		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -644,7 +645,6 @@ int main()
 
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~JUPITER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-		
 		
 		
 		ViewMatrix = Camera.GetView();
@@ -668,6 +668,7 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
+		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -687,7 +688,6 @@ int main()
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SATURNO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-		
 		
 		
 		ViewMatrix = Camera.GetView();
@@ -711,6 +711,7 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
+		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -730,7 +731,6 @@ int main()
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~URANO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-		
 		
 		
 		ViewMatrix = Camera.GetView();
@@ -754,6 +754,7 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
+		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -773,7 +774,6 @@ int main()
 		glBindTexture(GL_TEXTURE_2D, 0);
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~NETUNO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-		
 		
 		
 		ViewMatrix = Camera.GetView();
@@ -797,6 +797,7 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
+		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -860,7 +861,6 @@ int main()
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LUA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 		
 		
-		
 		ViewMatrix = Camera.GetView();
 		glm::mat4 ModelMatrixMoon = glm::rotate(glm::identity<glm::mat4>(), glm::radians(90.0f), glm::vec3{ 1.0f, 0.0f, 0.0f });
 		ModelMatrixMoon = glm::translate(ModelMatrixMoon, glm::vec3(sin((float)CurrentTime) * 60.0, 5.0f, cos((float)CurrentTime) * 50.0));
@@ -881,6 +881,7 @@ int main()
 		glUniformMatrix4fv(ModelViewProjectionLoc, 1, GL_FALSE, glm::value_ptr(ModelViewProjectionMatrix));
 
 		LightIntensityLoc = glGetUniformLocation(ProgramId, "LightIntensity");
+		glUniform1f(LightIntensityLoc, Light.Intensity);
 
 		LightDirectionViewSpace = ViewMatrix * glm::vec4{ Light.Direction, 0.0f };
 
@@ -905,40 +906,6 @@ int main()
 
 		glfwPollEvents();
 		glfwSwapBuffers(Window);
-	}
-
-	//Teste de Luz
-	light_setup(); //light environment
-
-
-	void light_setup(void)
-	{ 
-		GLfloat ambient[] = { 0.0, 0.0, 0.0, 1.0 };
-		GLfloat diffuse[] = { 1.0, 1.0, 1.0, 1.0 };
-		GLfloat position[] = { 0.0, 5.0, -5.0, 25.0 };
-		glEnable(GL_LIGHTING);
-
-		glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
-		glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
-		glLightfv(GL_LIGHT0, GL_POSITION, position);
-		glEnable(GL_LIGHT0);
-
-		glEnable(GL_LIGHTING);
-		glEnable(GL_LIGHT0);
-		glEnable(GL_DEPTH_TEST);
-	}
-
-	void initLighting()
-	{
-   		//glMaterialfv(GL_FRONT,GL_AMBIENT,yellow);
-    		//glMaterialfv(GL_FRONT,GL_SPECULAR,yellow);
-   		glEnable(GL_LIGHTING);
-    		glEnable(GL_LIGHT7);
-
-    		glLightfv(GL_LIGHT7, GL_AMBIENT, qAmb);
-    		glLightfv(GL_LIGHT7, GL_DIFFUSE, qDif);
-    		glLightfv(GL_LIGHT7, GL_SPECULAR, qSpec);
-    		//glMaterialfv(GL_FRONT,GL_DIFFUSE,yellow);
 	}
 
 	glDeleteBuffers(1, &SphereElementBuffer);
