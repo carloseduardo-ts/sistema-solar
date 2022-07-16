@@ -20,12 +20,6 @@ g++ camera.o main.cpp -o teste -lGL -lGLU -lglfw -lrt -lm -ldl -lXrandr -lXext -
 
 https://www.youtube.com/watch?v=BtSEcBt59vg
 
-## Dificuldades encontradas 
-
-De inicio a equipe teve dificuldades para configurar o ambiente com as dependências e conseguir dar os primeiros passos no trabalho. Somente três integrantes conseguiram configurar o ambiente, dois utilizando o Visual Studio e um pelo VS Code, e ao avançar no trabalho apresentou-se um erro no Visual Studio referente a inicialização dos projetos e como não foi encontrado solução para não perder foi decidido escolher o VS Code para construir o trabalho.
-
-
-
 ## 🛠 Tecnologias Utilizadas
 
 As ferramentas usadas para a construção do projeto foram as seguintes:
@@ -35,6 +29,10 @@ As ferramentas usadas para a construção do projeto foram as seguintes:
 - [OPENGL](https://www.opengl.org/)
 - [GLFW](https://www.glfw.org/)
 - [GLM](https://glm.g-truc.net/0.9.9/)
+
+## Dificuldades encontradas 
+
+De inicio a equipe teve dificuldades para configurar o ambiente com as dependências e conseguir dar os primeiros passos no trabalho. Somente três integrantes conseguiram configurar o ambiente, dois utilizando o Visual Studio e um pelo VS Code, e ao avançar no trabalho apresentou-se um erro no Visual Studio referente a inicialização dos projetos e como não foi encontrado solução para não perder foi decidido escolher o VS Code para construir o trabalho. Pensando nos integrantes que não conseguiram confirgurar o ambiente decidimos marcar sempre uma reunião a cada avanço que era obtido no trabalho para explicar como estava sendo feito o trabalho.
 
 ## 💪 Equipe
 
